@@ -1,2 +1,8 @@
 [1011/193603.448:ERROR:directory_reader_win.cc(43)] FindFirstFile: The system cannot find the path specified. (0x3)
 [1016/215224.292:ERROR:directory_reader_win.cc(43)] FindFirstFile: The system cannot find the path specified. (0x3)
+[1020/182856.326:ERROR:process_reader_win.cc(127)] NtOpenThread: {Access Denied} A process has requested access to an object, but has not been granted those access rights. (0xc0000022)
+[1020/182856.332:ERROR:exception_snapshot_win.cc(100)] thread ID 18492 not found in process
+[1020/182856.332:ERROR:process_reader_win.cc(127)] NtOpenThread: {Access Denied} A process has requested access to an object, but has not been granted those access rights. (0xc0000022)
+[1020/182856.332:ERROR:exception_snapshot_win.cc(100)] thread ID 9840 not found in process
+[1020/182856.573:ERROR:filesystem_win.cc(129)] GetFileAttributes C:\Users\mehme\AppData\Local\Microsoft\Edge\User Data\Crashpad\attachments\41eab23c-6a44-4e56-ac30-3b183c472b75: The system cannot find the path specified. (0x3)
+[1020/182856.589:ERROR:filesystem_win.cc(129)] GetFileAttributes C:\Users\mehme\AppData\Local\Microsoft\Edge\User Data\Crashpad\attachments\4b8aec8b-c061-4355-a65e-acff7c0d5017: The system cannot find the path specified. (0x3)
