@@ -7,89 +7,13 @@
 <iframe height="400px" width="100%" src="https://repl.it/@LuxeRadia/ChartreuseZigzagHandwritingrecognition?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
 <a href="https://repl.it/@LuxeRadia/ChartreuseZigzagHandwritingrecognition?lite=true">Python R,P,S, Game</a>
 
+<a href="MasterMind/index.html">MasterMind Link</a>
 
 
 
 
 
 
-
-
-print("Welcome to MasterMind")
-from random import *
-def generatecode():
-   codeLength = 4
-   code = ['null','null','null','null']
-   for i in range(codeLength) :     
-       x = randint(1,4)
-       if x == 1:
-           code[i] = 'R'
-       if x == 2:
-           code[i] = 'G'
-       if x == 3:
-           code[i] = 'B'
-       if x == 4:
-           code[i] = 'Y'
-   return code;
-def getuserinput():
-   while True:
-       guess = input('Type your guess: ')
-       guess = guess.upper()
-       validity = '0'
-       #check if guess is valid
-       if len(guess) != 4:
-           print('Invalid guess length. Please guess only 4 colors.')
-       else:
-           for i in range(4):
-               if (guess[i] != 'R') and (guess[i] != 'G') and (guess[i] != 'B') and (guess[i] != 'Y'):
-                   validity = 'invalid'
-           if (validity == 'invalid'):
-               print('Please only use the characters RGBY')
-           else:
-               break;
-   return guess;
-def comparefeedback(code,guess):
-   guesscopy = list(guess.upper())
-   codecopy = list(code)
-   x = 0
-   for i in range(4):
-       if code[i] == guess[i]:
-           del guesscopy[i-x]
-           del codecopy[i-x]
-           x = x+1
-           #look for exact matches, counts them
-   if x == 4:
-       print('You win! You guessed all colors correctly!')
-       return;
-   else:
-       feedback = 'B' * x
-       a = 0
-       b = 0
-       c = 0
-       #look for matches in wrong spot
-       while True:
-           if c == len(codecopy)*len(guesscopy):
-               break;
-           if (c % len(guesscopy) == 0) and (c != 0):
-               a = a+1
-               b = 0
-           if codecopy[a] == guesscopy[b]:
-               #invalidates the spots with matches so it doesn't see them again
-               guesscopy[b] = 'X'
-               codecopy[a] = 'z'
-               feedback = feedback + 'W'
-           b = b+1
-           c = c+1     
-       print(feedback)
-       replay()
-   return;
-def replay():
-   guess = getuserinput()
-   comparefeedback(code,guess)
- 
-code = generatecode()
-guess = getuserinput()
-comparefeedback(code,guess)
 
 </body>
 </html>
